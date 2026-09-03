@@ -13,11 +13,8 @@ body { background: #fcf5e8; }
 }
 
 .hero-scene {
-  background:
-    radial-gradient(ellipse at 88% 19%, rgba(255,255,255,.22) 0 2px, transparent 3px),
-    linear-gradient(135deg, rgba(255,255,255,.11) 1px, transparent 1px) 0 0 / 54px 54px,
-    #dbc6a5;
-  border: 1px solid #ae9270;
+  background: transparent;
+  border: 0;
   border-radius: 0;
   box-shadow: none;
   height: 650px;
@@ -30,36 +27,21 @@ body { background: #fcf5e8; }
 }
 
 .hero-scene::after {
-  background:
-    linear-gradient(90deg, transparent 49.8%, rgba(79, 62, 45, .22) 50%, transparent 50.2%) 0 0 / 100% 100%,
-    linear-gradient(rgba(79, 62, 45, .18), rgba(79, 62, 45, .18)) 82% 0 / 1px 100% no-repeat;
+  background: transparent;
   border: 1px solid rgba(34, 64, 43, .25);
   border-radius: 50%;
   content: '';
-  height: 105%;
-  left: 45%;
+  height: 72%;
+  left: 20%;
   pointer-events: none;
   position: absolute;
-  top: -30%;
-  width: 70%;
+  top: 5%;
+  width: 74%;
   z-index: 1;
 }
 
 .hero-scene::before {
-  background:
-    repeating-linear-gradient(176deg, rgba(70,43,25,.24) 0 2px, transparent 2px 8px),
-    linear-gradient(105deg, #bd8c59, #8d5e39 45%, #b9814f);
-  border-bottom: 11px solid #60402d;
-  border-top: 4px solid #533827;
-  bottom: -18%;
-  content: '';
-  height: 57%;
-  left: -8%;
-  position: absolute;
-  transform: perspective(920px) rotateX(58deg) rotateZ(-1.5deg);
-  transform-origin: center bottom;
-  width: 116%;
-  z-index: 1;
+  display: none;
 }
 
 .tv-set {
@@ -112,6 +94,22 @@ body { background: #fcf5e8; }
   border-radius: 22px;
   overflow: hidden;
   transform: translateZ(13px);
+}
+
+.tv-caption {
+  bottom: 5%;
+  color: #173b2b;
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(1rem, 1.35vw, 1.32rem);
+  font-style: italic;
+  left: 18%;
+  letter-spacing: -.015em;
+  line-height: 1.2;
+  margin: 0;
+  max-width: 74%;
+  position: absolute;
+  text-align: center;
+  z-index: 4;
 }
 
 .hero-scene img {
@@ -171,7 +169,7 @@ body { background: #fcf5e8; }
   position: absolute;
 }
 
-.hero-prop { bottom: 6%; font-size: .62rem; font-style: italic; z-index: 4; }
+.hero-prop { display: none; }
 .prop-car { left: 14%; transform: rotate(-6deg); }
 .prop-watch { right: 5%; transform: rotate(5deg); }
 
@@ -194,6 +192,7 @@ body { background: #fcf5e8; }
   .tv-screen { border-width: 4px; border-radius: 9px; }
   .hero-scribble, .hero-prop, .scene-note { display: none; }
   .hero-speech { border-radius: 15px; font-size: .72rem; padding: 9px 11px; right: 2%; top: 7%; }
+  .tv-caption { bottom: 2%; font-size: .92rem; left: 8%; max-width: 84%; }
   .hero-speech::after { border-right-width: 9px; border-top-width: 9px; bottom: -9px; left: 14px; }
 }
 
@@ -205,10 +204,11 @@ body { background: #fcf5e8; }
   .hero-summary { font-size: .84rem; margin: 20px 0 24px; }
   .hero-action { padding: 14px 18px; }
   .hero-scene { height: 535px; margin-top: 0; }
-  .tv-set { bottom: 15%; left: 14%; padding: 15px; transform: rotateY(-16deg) rotateX(4deg); width: 71%; }
+  .tv-set { bottom: 15%; left: 12%; padding: 15px; transform: rotateY(-16deg) rotateX(4deg); width: 77%; }
   .tv-screen { border-width: 6px; }
   .tv-set::before { right: -25px; width: 44px; }
   .scribble-label { font-size: .66rem; left: 34%; }
   .scribble-left, .scribble-right, .scene-note { font-size: .55rem; }
   .hero-speech { font-size: .76rem; padding: 10px 12px; right: 1%; top: 26%; }
+  .tv-caption { bottom: 4%; font-size: .9rem; left: 8%; max-width: 84%; }
 }
