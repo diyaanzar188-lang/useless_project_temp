@@ -50,10 +50,10 @@ body { background: #fcf5e8; }
   border-radius: 29px 31px 40px 42px;
   box-shadow: 11px 14px 0 #211a16, 20px 24px 0 #b28a60, 25px 30px 19px #49311f66;
   bottom: 17%;
-  left: 16%;
+  left: 10%;
   padding: 24px;
   position: absolute;
-  width: 68%;
+  width: 82%;
   transform: rotateY(-17deg) rotateX(4deg);
   transform-origin: center bottom;
   transform-style: preserve-3d;
@@ -100,16 +100,42 @@ body { background: #fcf5e8; }
   bottom: 5%;
   color: #173b2b;
   font-family: 'DM Serif Display', Georgia, serif;
-  font-size: clamp(1rem, 1.35vw, 1.32rem);
+  font-size: clamp(1.3rem, 1.9vw, 1.85rem);
   font-style: italic;
   left: 18%;
   letter-spacing: -.015em;
   line-height: 1.2;
   margin: 0;
-  max-width: 74%;
+  max-width: 82%;
   position: absolute;
   text-align: center;
   z-index: 4;
+}
+
+.tv-visual-group {
+  align-items: center;
+  bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  left: 10%;
+  position: absolute;
+  width: 82%;
+  z-index: 3;
+}
+
+.tv-visual-group .tv-set {
+  bottom: auto;
+  left: auto;
+  position: relative;
+  width: 100%;
+}
+
+.tv-visual-group .tv-caption {
+  bottom: auto;
+  left: auto;
+  max-width: 82%;
+  position: static;
 }
 
 .hero-scene img {
@@ -186,13 +212,14 @@ body { background: #fcf5e8; }
 
 @media (max-width: 570px) {
   .app-shell { padding: 0 20px 28px; }
-  .hero-scene { height: auto; aspect-ratio: 16 / 11; box-shadow: none; }
+  .hero-scene { aspect-ratio: auto; box-shadow: none; height: 390px; }
   .tv-set { border-width: 4px; border-radius: 18px 18px 25px 25px; box-shadow: 6px 8px 0 #2e241e; padding: 10px; transform: none; }
   .tv-set::before { display: none; }
   .tv-screen { border-width: 4px; border-radius: 9px; }
   .hero-scribble, .hero-prop, .scene-note { display: none; }
   .hero-speech { border-radius: 15px; font-size: .72rem; padding: 9px 11px; right: 2%; top: 7%; }
-  .tv-caption { bottom: 2%; font-size: .92rem; left: 8%; max-width: 84%; }
+  .tv-visual-group { bottom: 4%; gap: 18px; left: 9%; width: 82%; }
+  .tv-visual-group .tv-caption { font-size: 1.18rem; max-width: 96%; }
   .hero-speech::after { border-right-width: 9px; border-top-width: 9px; bottom: -9px; left: 14px; }
 }
 
@@ -204,11 +231,12 @@ body { background: #fcf5e8; }
   .hero-summary { font-size: .84rem; margin: 20px 0 24px; }
   .hero-action { padding: 14px 18px; }
   .hero-scene { height: 535px; margin-top: 0; }
-  .tv-set { bottom: 15%; left: 12%; padding: 15px; transform: rotateY(-16deg) rotateX(4deg); width: 77%; }
+  .tv-set { bottom: 15%; left: 6%; padding: 15px; transform: rotateY(-16deg) rotateX(4deg); width: 84%; }
   .tv-screen { border-width: 6px; }
   .tv-set::before { right: -25px; width: 44px; }
   .scribble-label { font-size: .66rem; left: 34%; }
   .scribble-left, .scribble-right, .scene-note { font-size: .55rem; }
   .hero-speech { font-size: .76rem; padding: 10px 12px; right: 1%; top: 26%; }
-  .tv-caption { bottom: 4%; font-size: .9rem; left: 8%; max-width: 84%; }
+  .tv-visual-group { bottom: 4%; gap: 20px; left: 6%; width: 84%; }
+  .tv-visual-group .tv-caption { font-size: 1.3rem; max-width: 88%; }
 }
