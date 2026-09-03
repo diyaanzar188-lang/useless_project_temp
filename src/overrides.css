@@ -1,1 +1,18 @@
 /* Intentionally available for small page-specific overrides. */
+
+.traffic-sound-button {
+  background: #173b2b;
+  border: 1px solid #173b2b;
+  color: #fff9ed;
+  font-size: .63rem;
+  font-weight: 700;
+  margin-top: 12px;
+  min-height: 36px;
+  padding: 9px 12px;
+  text-transform: uppercase;
+}
+
+.traffic-sound-button:hover,
+.traffic-sound-button:focus-visible { background: #285d42; }
+
+.traffic-sound-button:disabled { cursor: not-allowed; opacity: .55; }
